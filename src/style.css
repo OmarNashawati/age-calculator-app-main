@@ -1,55 +1,89 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "./base.css";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Netural */
-  --white: hsl(0, 100%, 100%);
-  --grey-100: hsl(0, 0%, 94%);
-  --grey-200: hsl(0, 0%, 86%);
-  --grey-500: hsl(0, 1%, 44%);
-  --black: hsl(0, 0%, 0%);
-
-  --primary: hsl(259, 100%, 65%);
-  --red-400: hsl(0, 100%, 67%);
-
-  --background: var(--grey-100);
-  --card-bg: var(--white)
-  --text: var(--black);
-  --placeholder: var(--grey-500);
-}
-
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: var(--background);
-  color: var(--text);
-  font-size: 32px;
+.card {
+  background: var(--card-bg);
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  border-radius: 0.3rem 0.3rem 2.5rem 0.3rem;
+  padding: 0.5rem;
+  min-width: 400px;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+.inputs-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+.input-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.input-title {
+  font-size: 0.25rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+input {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  padding: 8px;
+  width: 2.5rem;
+  border-radius: 5px;
+  font-weight: 900;
+}
+
+.middle-container {
+  display: flex;
+  align-items: center;
+}
+
+.horizontal-line {
+  background-color: var(--border);
+  height: 1px;
+  flex: 1 1 auto;
+}
+
+.but {
+  background: var(--primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.but:hover {
+  background-color: var(--black);
+}
+
+.result-container {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.result > i {
+  color: var(--primary);
+}
+
+.error-message {
+  font-size: 10px;
+  font-weight: normal;
+  color: var(--red-400);
+  width: 2.5rem;
+}
+
+.red {
+  color: var(--red-400) !important;
+}
+
+.red-border {
+  border: 1px solid var(--red-400) !important;
 }

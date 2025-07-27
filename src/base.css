@@ -1,0 +1,66 @@
+:root {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Netural */
+  --white: hsl(0, 100%, 100%);
+  --grey-100: hsl(0, 0%, 94%);
+  --grey-200: hsl(0, 0%, 86%);
+  --grey-400: hsl(0, 1%, 60%);
+  --grey-500: hsl(0, 1%, 44%);
+  --black: hsl(0, 0%, 0%);
+
+  --primary: hsl(259, 100%, 65%);
+  --red-400: hsl(0, 100%, 67%);
+
+  --background: var(--grey-100);
+  --card-bg: var(--white);
+  --text: var(--black);
+  --text-muted: var(--grey-500);
+  --border: var(--grey-200);
+  --placeholder: var(--grey-400);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  flex-direction: column;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+::placeholder {
+  color: var(--placeholder);
+  font-weight: 900;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.attribution {
+  padding: 0.5rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

@@ -9,10 +9,64 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Frontend Mentor | Age calculator app</title>
   </head>
   <body>
-    Day DD Month MM Year YYYY -- years -- months -- days
+    <div class="card">
+      <div class="inputs-container">
+        <div class="input-item js-day-input">
+          <p class="input-title">Day</p>
+          <input id="day-input" type="number" placeholder="DD" maxlength="2" />
+          <p class="error-message"></p>
+        </div>
+        <div class="input-item js-month-input">
+          <p class="input-title">Month</p>
+          <input
+            id="month-input"
+            type="number"
+            placeholder="MM"
+            maxlength="2"
+          />
+          <p class="error-message"></p>
+        </div>
+        <div class="input-item js-year-input">
+          <p class="input-title">Year</p>
+          <input
+            id="year-input"
+            type="number"
+            placeholder="YYYY"
+            maxlength="4"
+          />
+          <p class="error-message"></p>
+        </div>
+      </div>
+      <div class="middle-container">
+        <div class="horizontal-line"></div>
+        <div class="but js-calculate-button">
+          <img src="./public/assets/images/icon-arrow.svg" width="20" alt="" />
+        </div>
+      </div>
+      <div class="result-container">
+        <p class="result">
+          <i class="js-result-years">--</i>
+          years
+        </p>
+        <p class="result">
+          <i class="js-result-months">--</i>
+          months
+        </p>
+        <p class="result">
+          <i class="js-result-days">--</i>
+          days
+        </p>
+      </div>
+    </div>
 
     <div class="attribution">
       Challenge by

@@ -1,14 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,63 +12,52 @@
     />
     <title>Frontend Mentor | Age calculator app</title>
   </head>
+
   <body>
-    <div class="card">
-      <div class="inputs-container">
-        <div class="input-item js-day-input">
-          <p class="input-title">Day</p>
-          <input id="day-input" type="number" placeholder="DD" maxlength="2" />
-          <p class="error-message"></p>
+    <div class="calculator-container">
+      <form action="submit">
+        <div class="inputs-container">
+          <div class="input-item js-input-item-day">
+            <p class="input-title">Day</p>
+            <input id="day-input" type="number" placeholder="DD" maxlength="2" />
+            <small class="error-message"></small>
+          </div>
+
+          <div class="input-item js-input-item-month">
+            <p class="input-title">Month</p>
+            <input id="month-input" type="number" placeholder="MM" maxlength="2" />
+            <small class="error-message"></small>
+          </div>
+
+          <div class="input-item js-input-item-year">
+            <p class="input-title">Year</p>
+            <input id="year-input" type="number" placeholder="YYYY" maxlength="4" />
+            <small class="error-message"></small>
+          </div>
         </div>
-        <div class="input-item js-month-input">
-          <p class="input-title">Month</p>
-          <input
-            id="month-input"
-            type="number"
-            placeholder="MM"
-            maxlength="2"
-          />
-          <p class="error-message"></p>
+
+        <div class="submit-container">
+          <div class="horizontal-line"></div>
+
+          <button class="but js-calculate-button" type="submit">
+            <img src="./public/assets/images/icon-arrow.svg" width="20" alt="" />
+          </button>
         </div>
-        <div class="input-item js-year-input">
-          <p class="input-title">Year</p>
-          <input
-            id="year-input"
-            type="number"
-            placeholder="YYYY"
-            maxlength="4"
-          />
-          <p class="error-message"></p>
-        </div>
-      </div>
-      <div class="middle-container">
-        <div class="horizontal-line"></div>
-        <div class="but js-calculate-button">
-          <img src="./public/assets/images/icon-arrow.svg" width="20" alt="" />
-        </div>
-      </div>
+      </form>
+
       <div class="result-container">
-        <p class="result">
-          <i class="js-result-years">--</i>
-          years
-        </p>
-        <p class="result">
-          <i class="js-result-months">--</i>
-          months
-        </p>
-        <p class="result">
-          <i class="js-result-days">--</i>
-          days
-        </p>
+        <p class="result"><i class="js-result-item-years">--</i> years</p>
+        <p class="result"><i class="js-result-item-months">--</i> months</p>
+        <p class="result"><i class="js-result-item-days">--</i> days</p>
       </div>
     </div>
 
     <div class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
     </div>
-    <script type="module" src="/src/main.js"></script>
+
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>

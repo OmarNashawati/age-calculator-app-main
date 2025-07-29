@@ -1,12 +1,13 @@
-@import "./base.css";
+@import './base.css';
 
-.card {
+.calculator-container {
   background: var(--card-bg);
+  box-shadow: 2px 2px 16px 0 rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  border-radius: 0.3rem 0.3rem 2.5rem 0.3rem;
+  border-radius: 0.5rem 0.5rem 3rem 0.5rem;
   padding: 0.5rem;
-  min-width: 400px;
+  width: 12rem;
 }
 
 .inputs-container {
@@ -37,7 +38,7 @@ input {
   font-weight: 900;
 }
 
-.middle-container {
+.submit-container {
   display: flex;
   align-items: center;
 }
@@ -50,13 +51,16 @@ input {
 
 .but {
   background: var(--primary);
-  width: 40px;
-  height: 40px;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
   cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 .but:hover {
@@ -86,4 +90,22 @@ input {
 
 .red-border {
   border: 1px solid var(--red-400) !important;
+}
+
+@media (max-width: 576px) {
+  body {
+    padding: 0.5rem;
+  }
+  .calculator-container {
+    width: 100%;
+  }
+
+  .submit-container {
+    padding: 1rem 0;
+    justify-content: center;
+  }
+
+  .but {
+    position: absolute;
+  }
 }

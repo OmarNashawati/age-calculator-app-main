@@ -1,21 +1,21 @@
 export const ageCalculator = (day, month, year) => {
-  const today = new Date();
-  const birthDate = new Date(year, month - 1, day);
+  const today = new Date()
+  const birthDate = new Date(year, month - 1, day)
 
-  let years = today.getFullYear() - birthDate.getFullYear();
-  let months = today.getMonth() - birthDate.getMonth();
-  let days = today.getDate() - birthDate.getDate();
+  let years = today.getFullYear() - birthDate.getFullYear()
+  let months = today.getMonth() - birthDate.getMonth()
+  let days = today.getDate() - birthDate.getDate()
 
   if (days < 0) {
-    month--;
-    const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
-    days += prevMonth.getDate();
+    month--
+    const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0)
+    days += prevMonth.getDate()
   }
 
   if (months < 0) {
-    years--;
-    months += 12;
+    years--
+    months += 12
   }
 
-  return { year: years, month: months, day: days };
-};
+  return { years, months, days }
+}

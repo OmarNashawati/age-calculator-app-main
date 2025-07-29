@@ -1,5 +1,5 @@
 :root {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 32px;
 
   font-synthesis: none;
@@ -46,6 +46,12 @@ body {
   min-height: 100vh;
 }
 
+@media (max-width: 576px) {
+  body {
+    padding: 0.5rem;
+  }
+}
+
 ::placeholder {
   color: var(--placeholder);
   font-weight: 900;
@@ -57,7 +63,7 @@ img {
 }
 
 .attribution {
-  padding: 0.5rem;
+  padding: 1rem;
   font-size: 11px;
   text-align: center;
 }

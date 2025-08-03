@@ -7,7 +7,7 @@ export const ageCalculator = (day, month, year) => {
   let days = today.getDate() - birthDate.getDate()
 
   if (days < 0) {
-    month--
+    months--
     const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0)
     days += prevMonth.getDate()
   }
